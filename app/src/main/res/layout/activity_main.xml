@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/btn_info"
+        style="?buttonBarButtonStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView2"
+        app:srcCompat="@android:drawable/ic_menu_info_details" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="156dp"
+        android:layout_height="163dp"
+        android:layout_gravity="center"
+        app:layout_constraintBottom_toTopOf="@+id/txtNombre"
+        app:srcCompat="@drawable/torta_cumple" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/birthdayreminderappletra" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textPersonName"
+        android:text="agustinpank2@hotmail.com" />
+
+    <EditText
+        android:id="@+id/txtPassword"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+       android:text="agustinpank" />
+
+
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="50dp"
+        android:text="Olvidaste tu contraseña?"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btn_ingresar" />
+
+
+    <Button
+        android:id="@+id/btn_ingresar"
+        style="?buttonBarButtonStyle"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ovalo"
+        android:backgroundTint="#E9EC8E"
+        android:backgroundTintMode="add"
+        android:text="INGRESAR"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_registrar"
+        style="?buttonBarButtonStyle"
+        android:layout_width="125dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ovalo"
+        android:backgroundTint="#E9EC8E"
+        android:backgroundTintMode="add"
+        android:text="REGISTRARSE"
+        android:textColor="@color/black" />
+
+
+</LinearLayout>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:orientation="vertical"
+    tools:context=".VentanaPrincipalActivity"
+    >
+
+    <Button
+        android:id="@+id/btn_AgregarFecha"
+        style="?buttonBarButtonStyle"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/ovalo"
+        android:backgroundTint="#E9EC8E"
+        android:backgroundTintMode="add"
+        android:text="AGREGAR FECHA"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_MisFechas"
+        style="?buttonBarButtonStyle"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ovalo"
+        android:backgroundTint="#E9EC8E"
+        android:backgroundTintMode="add"
+        android:text="MIS FECHAS"
+        android:textColor="@color/black" />
+
+    <Button
+        android:id="@+id/btn_cerrarSesion"
+        style="?buttonBarButtonStyle"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/ovalo"
+        android:backgroundTint="#E9EC8E"
+        android:backgroundTintMode="add"
+        android:text="CERRAR SESION"
+        android:textColor="@color/black" />
+</LinearLayout>

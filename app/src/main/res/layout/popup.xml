@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="220dp"
+    android:layout_gravity="center"
+    android:background="@drawable/circlebackgroundforpopup">
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Por qué debo registrarme?"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="10dp"
+        android:text="Para que cada vez que descargues la aplicación tengas la informacion guardada de las fechas que elegiste recordar."
+        android:textColor="@color/grey" />
+
+    <Button
+        android:id="@+id/buttonClosePopUp"
+        style="?buttonBarButtonStyle"
+        android:layout_width="64dp"
+        android:layout_height="28dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="170dp"
+        android:background="@drawable/ovalo"
+        android:backgroundTint="#E9EC8E"
+        android:backgroundTintMode="add"
+        android:text="CERRAR"
+        android:textColor="@color/black" />
+</RelativeLayout>

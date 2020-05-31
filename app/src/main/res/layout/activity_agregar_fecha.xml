@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".VentanaAgregarFechaActivity"
+    android:background="@color/yellow">
+
+
+    <TextView
+        android:id="@+id/textView_SeleccionarFecha"
+        android:layout_width="215dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:text="SELECCIONA UNA FECHA"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <com.github.sundeepk.compactcalendarview.CompactCalendarView
+        android:id="@+id/compactCalendarView"
+        android:layout_width="fill_parent"
+        android:layout_height="450dp"
+        android:layout_gravity="center"
+        app:compactCalendarBackgroundColor="#D1942A"
+        app:compactCalendarCurrentSelectedDayBackgroundColor="#DC6E14"
+        app:compactCalendarMultiEventIndicatorColor="#000000"
+        app:compactCalendarTargetHeight="500dp"
+        app:compactCalendarTextColor="#FFF6F6"
+        app:compactCalendarTextSize="16sp"
+        app:compactCalendarDisplayOtherMonthDays="true"
+        app:compactCalendarEventIndicatorStyle="small_indicator"
+        app:compactCalendarCurrentSelectedDayTextColor="@color/yellow"
+        android:background="@drawable/ovalo"/>
+
+    <TextView
+        android:id="@+id/DiaSeleccionado"
+        android:layout_width="215dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+
+
+</LinearLayout>
