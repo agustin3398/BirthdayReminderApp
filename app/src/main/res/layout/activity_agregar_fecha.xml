@@ -36,13 +36,13 @@
         android:background="@drawable/ovalo"/>
 
     <TextView
-        android:id="@+id/DiaSeleccionado"
+        android:id="@+id/textDiaSeleccionado"
         android:layout_width="215dp"
         android:layout_height="30dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:textColor="@color/black"
-        android:textSize="18dp" />
+        android:textSize="12dp" />
 
 
 

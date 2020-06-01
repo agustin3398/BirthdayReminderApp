@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.firebaseproject.modelo.FechasDeCumpleanios;
@@ -20,8 +21,11 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class VentanaAgregarFechaActivity extends AppCompatActivity {
 
@@ -46,20 +50,18 @@ public class VentanaAgregarFechaActivity extends AppCompatActivity {
     // instancio mi usuario actual
     private FirebaseUser firebaseUser;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_agregar_fecha);
         initialize();
-
     }
 
     private void initialize() {
 
         // inicializo objetos de mi vista
         compactCalendar = (CompactCalendarView) findViewById(R.id.compactCalendarView);
-        textDiaSeleccionado = (TextView) findViewById(R.id.txtFechaSeleccionada);
+        textDiaSeleccionado = (TextView) findViewById(R.id.textDiaSeleccionado);
         dialogoPopUpFechaSeleccionada = new Dialog(this);
         dbFechaCumpleanios = FirebaseDatabase.getInstance().getReference("Fechas de Cumpleaños");
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
@@ -68,15 +70,18 @@ public class VentanaAgregarFechaActivity extends AppCompatActivity {
 
             @Override
             public void onDayClick(Date dateClicked) {
+                textDiaSeleccionado.setText(dateClicked.toString());
                 abrirFechaPopUpFechaSel();
-
             }
 
             @Override
             public void onMonthScroll(Date firstDayOfNewMonth) {
-                // TODO
+                SimpleDateFormat dataFormat = new SimpleDateFormat("MMMM - YYYY", Locale.getDefault());
+                ActionBar actionBar = getSupportActionBar();
+                actionBar.setTitle(dataFormat.format(firstDayOfNewMonth));
             }
         });
+
     }
 
     public void abrirFechaPopUpFechaSel() {
@@ -122,6 +127,8 @@ public class VentanaAgregarFechaActivity extends AppCompatActivity {
             String id = dbFechaCumpleanios.push().getKey();
             FechasDeCumpleanios fechas = new FechasDeCumpleanios(id, userId, nombrePersonaCumpl, edadPersonaCumpl, fechaSeleccionadaCumpl, ideasRegaloCumpl);
             dbFechaCumpleanios.child("FechasCumpleanios").child(id).setValue(fechas);
+
+            //muestro mensaje de guardar fecha y cierro popUp
             Toast.makeText(this, "Fecha Guardada", Toast.LENGTH_LONG).show();
             dialogoPopUpFechaSeleccionada.dismiss();
 

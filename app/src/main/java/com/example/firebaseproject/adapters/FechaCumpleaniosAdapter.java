@@ -1,10 +1,11 @@
 package com.example.firebaseproject.adapters;
 
 /*
-* esta clase va a tener la respnsabilidad de establecer los valores que obtenemos
-* de nuestra base de datos para mostrarlos en la lista */
+ * esta clase va a tener la respnsabilidad de establecer los valores que obtenemos
+ * de nuestra base de datos para mostrarlos en la lista */
 
 
+import android.text.NoCopySpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,7 +24,7 @@ public class FechaCumpleaniosAdapter extends RecyclerView.Adapter<FechaCumpleani
     private int resource;
     private ArrayList<FechasDeCumpleanios> listaFechasCumples;
 
-    public FechaCumpleaniosAdapter(ArrayList<FechasDeCumpleanios> listaFechaCumples, int resource){
+    public FechaCumpleaniosAdapter(ArrayList<FechasDeCumpleanios> listaFechaCumples, int resource) {
         this.listaFechasCumples = listaFechaCumples;
         this.resource = resource;
     }
@@ -33,7 +34,7 @@ public class FechaCumpleaniosAdapter extends RecyclerView.Adapter<FechaCumpleani
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(resource,parent,false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(resource, parent, false);
         return new ViewHolder(view);
     }
 
@@ -48,9 +49,6 @@ public class FechaCumpleaniosAdapter extends RecyclerView.Adapter<FechaCumpleani
         holder.txtFechaPersonaCumple.setText(fechasDeCumpleanios.getFechaCumpleanios());
         holder.txtIdeasRegaloCumple.setText(fechasDeCumpleanios.getIdeasParaRegalar());
 
-
-
-
     }
 
     /*Retorna el numero de vistas que estoy obteniendo*/
@@ -59,7 +57,7 @@ public class FechaCumpleaniosAdapter extends RecyclerView.Adapter<FechaCumpleani
         return listaFechasCumples.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         private TextView txtNombrePersonaCumple;
         private TextView txtEdadPersonaCumple;
@@ -67,7 +65,7 @@ public class FechaCumpleaniosAdapter extends RecyclerView.Adapter<FechaCumpleani
         private TextView txtIdeasRegaloCumple;
         public View view;
 
-        public ViewHolder (View view){
+        public ViewHolder(View view) {
             super(view);
             this.view = view;
             this.txtNombrePersonaCumple = (TextView) view.findViewById(R.id.fechasDeCumpleaniosNombrePersona);
